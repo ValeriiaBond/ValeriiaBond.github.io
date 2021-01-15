@@ -100,27 +100,57 @@
 			<div class="projects">
 				<h3>Projects</h3>
 				<div class="carousel right_border">
-					<div class="arrow_previous">&#5176;</div>
+					<div class="arrow_previous">&#10148;</div>
 					<div class="carousel_hider">
 						<ul class="carousel_list">
-							<li><a href="master/index.html">link</a></li>
-							<li><a href="charivna/index.html">link</a></li>
+							<li><a target="_blank" href="master/index.html">Project "Master" on Bootstrap3</a></li>
+							<li><a target="_blank" href="charivna/index.html">Project "Charivna Mozaika"</a></li>
 						</ul>
 					</div>
-					<div class="arrow_next">&#5171;</div>
+					<div class="arrow_next">&#10148;</div>
 				</div>
-				<ul class="carousel_dots">
+<!-- 				<ul class="carousel_dots">
 					<li class="active"><a href="#"></a></li>
 					<li><a href="#"></a></li>
-				</ul>
+				</ul> -->
 			</div>
 		</div>
 	</div>
 	<script>
 		$(document).ready(function(){
-			$('.carousel_dots li').click(function(){
-				$('li.active').removeClass('active');
-				$(this).addClass('active');
+			// $('.carousel_dots li').click(function(){
+			// 	$('li.active').removeClass('active');
+			// 	$(this).addClass('active');
+			// });
+
+			var leftUIEl = $('.arrow_previous');
+			var rightUIEl = $('.arrow_next');
+			var elementList = $('.carousel_list');
+
+			var pixelOffset = 250;
+			var currentLeftValue = 0;
+
+			var elementsCount = elementList.find('li').length;
+			console.log(elementsCount);
+
+			var minimumOffset = -((elementsCount - 1) * pixelOffset);
+			var maximumOffset = 0;
+			
+			leftUIEl.click(function(){
+				if(currentLeftValue != maximumOffset){
+				currentLeftValue +=250;
+				elementList.animate({left: currentLeftValue + "px"}, 500)					
+				}
+			})
+
+			rightUIEl.click(function(){
+				if (currentLeftValue != minimumOffset){
+				currentLeftValue -=250;
+				elementList.animate({left: currentLeftValue + "px"}, 500)
+				}else{
+					currentLeftValue = 0;
+					elementList.animate({left: currentLeftValue + "px"}, 500)
+				}					
 			});
 		});
 	</script>

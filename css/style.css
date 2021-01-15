@@ -128,10 +128,12 @@ body{
 .general_description{
 	border-bottom: 1px solid #000;
 	padding: 0 20px 20px 400px;
+	font-size: 20px;
 }
 
 .personal_info{
 	padding: 20px 20px 0 400px;
+	font-size: 20px;
 }
 
 .caption_photo{
@@ -353,6 +355,10 @@ body{
 
 .contact_list li{
 	margin-right: 40px;
+	transition: all .4s ease;
+}
+.contact_list li:hover{
+	transform: scale(1.15);
 }
 
 .contact_list li a{
@@ -412,6 +418,7 @@ body{
 
 .arrow_previous{
 	margin-right: 25px;
+	transform: rotate(-180deg);
 }
 
 .arrow_next{
@@ -428,6 +435,7 @@ body{
 .carousel_list{
 	width: 9999px;
 	font-size: 0;
+	position: relative;
 }
 
 .carousel_list li{
@@ -443,6 +451,7 @@ body{
 
 .carousel_list li+li{
 	background: url(../images/carousel/mozaika.png) no-repeat;
+	background-size: 100% auto;
 }
 
 .carousel_list li a{
