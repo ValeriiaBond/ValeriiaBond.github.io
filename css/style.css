@@ -75,8 +75,7 @@ a{
 
 .right_border:before, .right_border:after{
 	right: -25px;
-	transform: translateX(50%);
-
+	/*transform: translateX(50%);*/
 }
 
 
@@ -152,18 +151,17 @@ body{
 
 .main_content{
 	display: flex;
-	padding: 40px 20px;
+	padding: 50px 20px 0;
 }
 
 .left_side, .right_side{
 	flex-basis: 600px;
-	height: 400px;
 }
 
 
 /*education*/
 
-.education, .courses, .projects, .skills, .contacts{
+.education, .courses, .projects, .skills, .contacts, .contacts_mobile{
 	padding-left: 50px;
 	padding-right: 50px;
 	padding-bottom: 45px;
@@ -320,6 +318,7 @@ body{
 	margin-top: 40px;
 	display: flex;
 	justify-content: space-around;
+	flex-wrap: wrap;
 }
 
 .languages li{
@@ -338,7 +337,7 @@ body{
 
 /*links to socila media*/
 
-.contacts h3{
+.contacts h3, .contacts_mobile h3{
 	background: url(../images/icons/mail.svg) no-repeat;
 	background-size: 25px 25px;
 }
@@ -375,6 +374,10 @@ body{
 
 .contact_list li+li+li a{
 	background: url(../images/icons/facebook.svg);
+}
+
+.contacts_mobile{
+	display: none;
 }
 
 
@@ -494,12 +497,152 @@ body{
 
 
 
+@media (max-width: 1240px){
+	.container{
+		width: 800px;
+	}
+
+	.left_side, .right_side{
+		width: 400px;
+		flex-grow: 0;
+	}
+
+	.education, .courses, .projects, .skills, .contacts, .contacts_mobile{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 35px;
+}
+
+	.certificate{
+		width: 300px;
+	}
+
+	.languages li{
+		padding: 22px 10px;
+		height: 95px;
+    	width: 95px;
+	}
+
+	.btn_download{
+		font-size: 10px;
+		width: 80px;
+		height: 40px;
+		padding: 4px 10px 0;
+	}
+
+	.contact_list li{
+		margin-right: 25px;
+	}
+
+	.contact_list li a{
+		width: 40px;
+		height: 40px;
+	}
+
+	.arrow_previous, .arrow_next{
+    width: 25px;
+    height: 25px;
+    font-size: 15px;
+	}
+
+	.arrow_previous{
+		margin-right: 5px;
+	}
+
+	.arrow_next{
+		margin-left: 5px;
+	}
+
+}
+
+@media (max-width: 840px){
+
+	.container{
+		width: 450px;
+	}
+
+	.introduction {
+    background-size: auto 100%;
+ 	}
+
+	.intro_caption{
+		margin: 0 auto 30px;
+	}
+
+	.intro_description{
+		position: static;
+		transform: translateY(0);
+	}
+
+	.general_description, .personal_info{
+		padding: 0;
+		text-align: center;
+	}
+
+	.personal_info{
+		padding: 0;
+	}
+
+	.main_content{
+		display: block;
+	}
+
+	.left_side, .right_side {
+    width: auto;
+	}
+
+	.contacts{
+		display: none;
+	}
+
+	.contacts_mobile{
+		display: block;
+	}
+
+	.right_border:before, .right_border:after{
+		width: 0;
+		transform: translateX(-50%);
+	}
+
+	.left_border:before{
+		width: 1px;
+	} 
+
+	.left_border:after{
+	width: 6px;
+	}
+}
 
 
 
+@media (max-width: 490px){
+	.container{
+		width: 300px;
+	}
+
+	.intro_caption{
+	width: 300px;
+	}
 
 
 
+	.certificate {
+    width: 260px;
+	}
+
+	.contact_list li {
+    margin-right: 15px;
+	}
+
+	.contact_list li a {
+    width: 30px;
+    height: 30px;
+ 	}
+
+ 	.btn_download {
+    height: 30px;
+    padding: 0px 10px 0;
+}
 
 
 
