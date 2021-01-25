@@ -75,7 +75,7 @@ a{
 
 .right_border:before, .right_border:after{
 	right: -25px;
-	/*transform: translateX(50%);*/
+	transform: translateX(50%);
 }
 
 

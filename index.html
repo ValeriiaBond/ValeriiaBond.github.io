@@ -58,7 +58,7 @@
 						<input class="certificate_input" type="checkbox" id="certificate">
 						<label class="certificate_title" for="certificate">Certificate</label>
 						<div class="certificate_content">
-							<img src="images/certificate_lemonschool.jpg" alt="">
+							<a href="images/certificate_lemonschool.jpg" target="_blank"><img src="images/certificate_lemonschool.jpg" alt="сертификат lemon school"></a>
 						</div>
 					</div>				
 				</div>
@@ -78,14 +78,14 @@
 		<div class="right_side">
 			<div class="skills">
 				<h3>skills</h3>
-				<ul class="skills_list left_border right_border">
+				<ul class="skills_list right_border">
 					<li>HTML</li>
 					<li>CSS</li>
 					<li>Basic knowledge of JavaScript and JQuery</li>
 					<li>Bootstrap3, Bootstrap4</li>
 					<li>GIT</li>
 				</ul>
-				<ul class="languages left_border right_border">
+				<ul class="languages right_border">
 					<li>Russian
 						<p>Native</p>
 					</li>
@@ -99,7 +99,7 @@
 			</div>
 			<div class="projects">
 				<h3>Projects</h3>
-				<div class="carousel left_border right_border">
+				<div class="carousel right_border">
 					<div class="arrow_previous">&#10148;</div>
 					<div class="carousel_hider">
 						<ul class="carousel_list">
@@ -164,6 +164,25 @@
 				}					
 			});
 		});
+
+		  function checkWidth() {
+		    var windowWidth = $('body').innerWidth(),
+		        elem = $(".languages, .carousel, .skills_list");
+		    if(windowWidth < 840){
+		      elem.removeClass('right_border');
+		      elem.addClass('left_border');
+		    }
+		    else{
+		      elem.removeClass('left_border');
+		      elem.addClass('right_border');
+		    }
+		  }
+
+		  checkWidth(); // проверит при загрузке страницы
+
+		  $(window).resize(function(){
+		    checkWidth(); // проверит при изменении размера окна клиента
+		  });
 	</script>
 </body>
 </html>
