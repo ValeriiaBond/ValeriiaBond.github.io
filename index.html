@@ -110,8 +110,8 @@
 					<div class="arrow_previous">&#10148;</div>
 					<div class="carousel_hider">
 						<ul class="carousel_list">
-							<li><a target="_blank" href="master/index.html">Project "Master" on Bootstrap3</a></li>
-							<li><a target="_blank" href="charivna/index.html">Project "Charivna Mozaika"</a></li>
+							<li data-href="master/index.html"><a href="master/index.html">Project "Master" on Bootstrap3</a></li>
+							<li data-href="charivna/index.html"><a href="charivna/index.html">Project "Charivna Mozaika"</a></li>
 						</ul>
 					</div>
 					<div class="arrow_next">&#10148;</div>
@@ -140,6 +140,11 @@
 			// 	$('li.active').removeClass('active');
 			// 	$(this).addClass('active');
 			// });
+            
+            $('.carousel_list>li[data-href]').on("click", function() {
+            document.location = $(this).data('href', '_blank')
+        });
+
 
 			var leftUIEl = $('.arrow_previous');
 			var rightUIEl = $('.arrow_next');
