@@ -1075,21 +1075,33 @@ header>.container{
 	position: relative;
 }
 
+.header_bottom{
+    display: block;
+    position: absolute;
+    top: 135px;
+    left: 0;
+    width: 100%;
+   left: -100%;
+    transition: all 0.4s ease;
+}
+
+.header_bottom.open-menu {
+    left: 0;
+}
 .header_bottom ul{
 	flex-direction: column;
-/*	border: 1px solid green;
-*/	width: 25%;
+	width: 25%;
 	padding: 15px 10px 0;
 	font-size: 25px;
 	margin-bottom: 0;
     margin-top: 0;
     position: absolute;
-    top: 85px;
+    top: 40px;
     left: 0;
     background: #fff;
     z-index: 10;
-/*    display: none;
-*/}	
+    //display: none;
+}
 
 .header_bottom a{
 	padding-bottom: 5px;
@@ -1098,7 +1110,6 @@ header>.container{
 	position: relative;
 	display: block;
 }
-
 .header_bottom a:after{
 	content: '';
 	border: solid black;
@@ -1108,13 +1119,63 @@ header>.container{
 	position: absolute;
 	right: 0;
 	top: 0;
-/*  -webkit-transform: rotate(-45deg);*/
+  -webkit-transform: rotate(-45deg);
 }
 
 .header_bottom>a:nth-child(5) {
     padding-left: 0;
 }
 
+.menu-burger__header {
+        position: relative; /* задаем относительное позиционирование */
+        width: 40px; /* определяем размеры блока */
+        height: 20px;
+        display: block;
+        margin-left: 10px;
+        margin-bottom: 20px;
+}
+
+.menu-burger__header span, .menu-burger__header:after, .menu-burger__header:before{
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    background: #515758;
+    margin: 0 auto;
+}
+.menu-burger__header span{
+    top: 7px;
+}
+.menu-burger__header:after, .menu-burger__header:before{
+    content: '';
+}
+.menu-burger__header:after{
+    bottom: 3px;
+}
+.menu-burger__header:before{
+    top: 0;
+}
+
+.menu-burger__header.open-menu span {
+    opacity:0; 
+    transition: 0.5s; 
+}
+.menu-burger__header.open-menu:before {
+    transform: rotate(38deg);
+    top: 5px;
+    transition: 0.4s;
+}
+.menu-burger__header.open-menu:after {
+    transform: rotate(-38deg);
+    bottom: 13px;
+    transition: 0.4s;
+}
+
+.header_bottom {
+    height: 60px;
+}
+.content-wrapper {
+    margin-top: 48px;
+}
 
 .slider{
 	display: none;
