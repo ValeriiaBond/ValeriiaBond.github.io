@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </head>
+
 <body>
 	<div class="introduction">
 		<div class="container intro_content">
@@ -24,13 +26,15 @@
 				</div>
 			</div>
 			<div class="intro_description">
-					<div class="general_description">After finishing a front-end course  I have decided that I want to continue my development in this sphere. I am inspired by brining web pages to life and delivering the best experience to users.</div>
-					<div class="personal_info">
-						<p>Kharkiv</p>
-						<p>Date of birth: March, 23</p>
-						<p><a href="tel:+380994031328">Phone: +38(099)-403-13-281</a></p>
-						<p><a href="mailto:valeriiasbondarenko@gmail.cou">Email: valeriiasbondarenko@gmail.com</a></p>
-					</div>
+				<div class="general_description">After finishing a front-end course I have decided that I want to
+					continue my development in this sphere. I am inspired by brining web pages to life and delivering
+					the best experience to users.</div>
+				<div class="personal_info">
+					<p>Kharkiv</p>
+					<p>Date of birth: March, 23</p>
+					<p><a href="tel:+380994031328">Phone: +38(099)-403-13-28</a></p>
+					<p><a href="mailto:valeriiasbondarenko@gmail.cou">Email: valeriiasbondarenko@gmail.com</a></p>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -56,18 +60,19 @@
 					<h5>HTML/CSS + JavaScript</h5>
 					<p>09/2020 - 12/2020</p>
 					<details class="certificate">
-                        <summary class="certificate_title">Certificate</summary>
-                        <p class="certificate_body">
-              		        <a href="images/certificate_lemonschool.jpg" target="_blank"><img src="images/certificate_lemonschool.jpg" alt="сертификат lemon school"></a>                  
-                        </p>
-					</details>	
+						<summary class="certificate_title">Certificate</summary>
+						<p class="certificate_body">
+							<a href="images/certificate_lemonschool.jpg" target="_blank"><img
+									src="images/certificate_lemonschool.jpg" alt="сертификат lemon school"></a>
+						</p>
+					</details>
 					<!--<div class="certificate">
 						<input class="certificate_input" type="checkbox" id="certificate">
 						<label class="certificate_title" for="certificate">Certificate</label>
 						<div class="certificate_content">
 							<a href="images/certificate_lemonschool.jpg" target="_blank"><img src="images/certificate_lemonschool.jpg" alt="сертификат lemon school"></a>
 						</div>
-					</div>-->				
+					</div>-->
 				</div>
 			</div>
 			<div class="contacts">
@@ -75,12 +80,14 @@
 				<div class="link_items">
 					<ul class="contact_list left_border">
 						<li><a target="_blank" href="https://github.com/ValeriiaBond"></a></li>
-						<li><a target="_blank" href="https://www.linkedin.com/in/valeria-bondarenko-23a083163/"></a></li>
+						<li><a target="_blank" href="https://www.linkedin.com/in/valeria-bondarenko-23a083163/"></a>
+						</li>
 						<li><a target="_blank" href="https://www.facebook.com/profile.php?id=100011553276880"></a></li>
 					</ul>
-					<a class="btn_download" href="valeriia_bondarenko_2.pdf" target="_blank">Download CV in PDF format</a>
+					<a class="btn_download" href="valeriia_bondarenko_2.pdf" target="_blank">Download CV in PDF
+						format</a>
 				</div>
-			</div>			
+			</div>
 		</div>
 		<div class="right_side">
 			<div class="skills">
@@ -110,13 +117,15 @@
 					<div class="arrow_previous">&#10148;</div>
 					<div class="carousel_hider">
 						<ul class="carousel_list">
-							<li data-href="master/index.html"><a href="master/index.html">Project "Master" on Bootstrap3</a></li>
-							<li data-href="charivna/index.html"><a href="charivna/index.html">Project "Charivna Mozaika"</a></li>
+							<li data-href="master/index.html"><a href="master/index.html">Project "Master" on
+									Bootstrap3</a></li>
+							<li data-href="charivna/index.html"><a href="charivna/index.html">Project "Charivna
+									Mozaika"</a></li>
 						</ul>
 					</div>
 					<div class="arrow_next">&#10148;</div>
 				</div>
-<!-- 				<ul class="carousel_dots">
+				<!-- 				<ul class="carousel_dots">
 					<li class="active"><a href="#"></a></li>
 					<li><a href="#"></a></li>
 				</ul> -->
@@ -126,24 +135,26 @@
 				<div class="link_items">
 					<ul class="contact_list left_border">
 						<li><a target="_blank" href="https://github.com/ValeriiaBond"></a></li>
-						<li><a target="_blank" href="https://www.linkedin.com/in/valeria-bondarenko-23a083163/"></a></li>
+						<li><a target="_blank" href="https://www.linkedin.com/in/valeria-bondarenko-23a083163/"></a>
+						</li>
 						<li><a target="_blank" href="https://www.facebook.com/profile.php?id=100011553276880"></a></li>
 					</ul>
-					<a class="btn_download" href="valeriia_bondarenko_2.pdf" target="_blank">Download CV in PDF format</a>
+					<a class="btn_download" href="valeriia_bondarenko_2.pdf" target="_blank">Download CV in PDF
+						format</a>
 				</div>
-			</div>	
+			</div>
 		</div>
 	</div>
 	<script>
-		$(document).ready(function(){
+		$(document).ready(function () {
 			// $('.carousel_dots li').click(function(){
 			// 	$('li.active').removeClass('active');
 			// 	$(this).addClass('active');
 			// });
-            
-            $('.carousel_list>li[data-href]').on("click", function() {
-            document.location = $(this).data('href', '_blank')
-        });
+
+			$('.carousel_list>li[data-href]').on("click", function () {
+				document.location = $(this).data('href', '_blank')
+			});
 
 
 			var leftUIEl = $('.arrow_previous');
@@ -158,43 +169,44 @@
 
 			var minimumOffset = -((elementsCount - 1) * pixelOffset);
 			var maximumOffset = 0;
-			
-			leftUIEl.click(function(){
-				if(currentLeftValue != maximumOffset){
-				currentLeftValue +=250;
-				elementList.animate({left: currentLeftValue + "px"}, 500)					
+
+			leftUIEl.click(function () {
+				if (currentLeftValue != maximumOffset) {
+					currentLeftValue += 250;
+					elementList.animate({ left: currentLeftValue + "px" }, 500)
 				}
 			})
 
-			rightUIEl.click(function(){
-				if (currentLeftValue != minimumOffset){
-				currentLeftValue -=250;
-				elementList.animate({left: currentLeftValue + "px"}, 500)
-				}else{
+			rightUIEl.click(function () {
+				if (currentLeftValue != minimumOffset) {
+					currentLeftValue -= 250;
+					elementList.animate({ left: currentLeftValue + "px" }, 500)
+				} else {
 					currentLeftValue = 0;
-					elementList.animate({left: currentLeftValue + "px"}, 500)
-				}					
+					elementList.animate({ left: currentLeftValue + "px" }, 500)
+				}
 			});
 		});
 
-		  function checkWidth() {
-		    var windowWidth = $('body').innerWidth(),
-		        elem = $(".languages, .carousel, .skills_list");
-		    if(windowWidth < 840){
-		      elem.removeClass('right_border');
-		      elem.addClass('left_border');
-		    }
-		    else{
-		      elem.removeClass('left_border');
-		      elem.addClass('right_border');
-		    }
-		  }
+		function checkWidth() {
+			var windowWidth = $('body').innerWidth(),
+				elem = $(".languages, .carousel, .skills_list");
+			if (windowWidth < 840) {
+				elem.removeClass('right_border');
+				elem.addClass('left_border');
+			}
+			else {
+				elem.removeClass('left_border');
+				elem.addClass('right_border');
+			}
+		}
 
-		  checkWidth(); // проверит при загрузке страницы
+		checkWidth(); // проверит при загрузке страницы
 
-		  $(window).resize(function(){
-		    checkWidth(); // проверит при изменении размера окна клиента
-		  });
+		$(window).resize(function () {
+			checkWidth(); // проверит при изменении размера окна клиента
+		});
 	</script>
 </body>
+
 </html>
